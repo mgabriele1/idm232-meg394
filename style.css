@@ -1,0 +1,81 @@
+/*INITIAL STYLING*/
+@import "normalize.css";
+/*lucida*/
+@font-face {
+    font-family: 'lucida_granderegular';
+    src: url('lucidagrande-01-webfont.woff2') format('woff2'),
+         url('lucidagrande-01-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'lucida_grandebold';
+    src: url('lucidagrande-bold-02-webfont.woff2') format('woff2'),
+         url('lucidagrande-bold-02-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* colors*/
+:root {
+    --h1: #521527;
+    --h2: #D50000;
+    --accento: #FFA500;
+    --accenty: #F6C700;
+    --text: #212121;
+    --backg: #FFF7E5;
+}
+/* headings*/
+body {
+    background-color: var(--backg);
+    width: 100%;
+}
+h1 {
+    font-family: playfair-display,serif;
+    font-weight: 900; /* 400, 700*/
+    font-style: normal;
+    color: var(--h1);
+}
+h2 {
+    font-family:  lucida_grandebold, sans-serif; /*regular*/
+    font-weight: normal; 
+    font-style: normal;
+    color: var(--h2);
+    text-transform: uppercase;
+}
+h3 {
+    font-family: futura-pt, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: var(--text);
+    text-transform: uppercase;
+}
+p {
+    font-family: futura-pt, sans-serif;
+    font-weight: 400; /* 4009, 500, 700*/
+    font-style: normal;
+    color: var(--text);
+}
+/* images */
+img {
+    max-width:100%;
+    height:auto;
+}
+
+/* grids */
+.header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    height: 10vw;
+    width: 100vw;
+    background-color: var(--accenty);
+    align-items: start;
+    justify-items: center;
+}
