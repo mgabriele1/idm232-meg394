@@ -1,5 +1,7 @@
 /*INITIAL STYLING*/
 @import "normalize.css";
+/*icons*/
+@import url('https://css.gg/css?=|bowl|close|heart|more-alt|search|time');
 /*lucida*/
 @font-face {
     font-family: 'lucida_granderegular';
@@ -26,15 +28,16 @@
 :root {
     --h1: #521527;
     --h2: #D50000;
-    --accento: #FFA500;
-    --accenty: #F6C700;
-    --text: #212121;
-    --backg: #FFF7E5;
+    --accent1: #FFA500;
+    --accent2: #F6C700;
+    --dark: #212121;
+    --light: #FFF7E5;
 }
 /* headings*/
 body {
     background-color: var(--backg);
     width: 100%;
+    background-color: var(--light);
 }
 h1 {
     font-family: playfair-display,serif;
@@ -53,14 +56,14 @@ h3 {
     font-family: futura-pt, sans-serif;
     font-weight: 700;
     font-style: normal;
-    color: var(--text);
+    color: var(--dark);
     text-transform: uppercase;
 }
-p {
+p, ul {
     font-family: futura-pt, sans-serif;
-    font-weight: 400; /* 4009, 500, 700*/
+    font-weight: 400; /* 400i, 500, 700*/
     font-style: normal;
-    color: var(--text);
+    color: var(--dark);
 }
 /* images */
 img {
@@ -68,14 +71,451 @@ img {
     height:auto;
 }
 
+/* icons */
+.gg-search {
+--ggs: .85;
+color: var(--h1);
+}
+.gg-search:hover {
+color: var(--h2);
+}
+.gg-more-alt {
+--ggs: .85;
+color: var(--h1);
+}
+.gg-more-alt:hover {
+color: var(--h2);
+}
+
 /* grids */
+/* header */
+.logo {
+    grid-area: logo;
+    max-height: 63px;
+}
+.search {
+    grid-area: srch;
+}
+#more {
+    grid-area: more;
+}
 .header {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr .5fr .5fr;
     grid-template-rows: 1fr;
-    height: 10vw;
-    width: 100vw;
-    background-color: var(--accenty);
-    align-items: start;
+    grid-template-areas:"logo logo logo . . srch more";
+    height: 40%;
+    max-height: 70px;
+    width: 100%;
+    align-items: center;
     justify-items: center;
+    padding: .25rem;
+}
+
+/* home */
+.home-wrapper {
+    display: grid;
+    grid-template-columns: 1;
+    grid-auto-rows: auto;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+}
+.home-card {
+    margin: 0 0 -.25rem 0;
+}
+.home-card p{
+text-transform: uppercase;
+font-weight: 500;
+color: var(--light);
+font-size: .75rem;
+}
+
+.home-card h3{
+font-family:  lucida_grandebold, sans-serif;
+font-weight: normal; 
+font-style: normal;
+color: var(--light);
+font-size: 1rem;
+}
+
+.text-box {
+z-index: 10;
+margin: -4rem 0 0 0;
+background: rgb(33,33,33);
+background: linear-gradient(180deg, rgba(33,33,33,0.1110819327731093) 0%, rgba(33,33,33,1) 100%);
+position: absolute;
+width: 100%;
+height: 3.75rem;
+padding: .25rem .7rem;
+}
+
+.home-img {
+    z-index: 0;
+    position: relative;
+    filter: brightness(90%)
+}
+
+/* recipe */
+.rec-title {
+    grid-area: title;
+}
+.rec-info {
+    grid-area: info;
+}
+.rec-ingred {
+    grid-area: ingred;
+}
+.rec-instruct {
+    grid-area: instruct;
+}
+.recipe-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    grid-template-areas:
+    "title"
+    "info"
+    "ingred"
+    "instruct";
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+}
+.gg-time {
+    grid-area: gg-time;
+}
+.time {
+    grid-area: time;
+}
+.gg-bowl {
+    grid-area: gg-bowl;
+}
+.serv {
+    grid-area: serv;
+}
+.gg-heart {
+    grid-area: gg-heart;
+}
+.cal {
+    grid-area: cal;
+}
+.rec-info {
+    grid-area: info;
+    display: grid;
+    grid-template-columns: .5fr 1.5fr .25fr .5fr 1.5fr .25fr .5fr 1.5fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "gg-time time . gg-bowl serv . gg-heart cal";
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    padding: 1.5rem .25rem;
+    color: var(--h2);
+    margin: 0 0 3rem 0;
+    border-bottom: 1px dashed var(--h1) ;
+    border-top: 1px dashed var(--h1) ;
+}
+.rec-info p {
+    color: var(--h1);
+}
+.title-text {
+    padding: .25rem;
+}
+.title-text p {
+    padding: .5rem;
+    margin: 2rem 0 3rem 0;
+    line-height: 1.5;
+}
+.rec-ingred {
+margin: 2rem 0 4rem;
+}
+.rec-ingred h2, .rec-instruct h2 {
+    padding: 0 .5rem 1rem .25rem;
+}
+.rec-ingred img, .rec-instruct img {
+    padding: 1rem;
+}
+.rec-ingred ul {
+    list-style-type: none;
+    padding: 1rem;
+    line-height: 1.5;
+}
+.rec-instruct p {
+    padding: 1rem 1rem 2rem 1rem;
+    line-height: 1.5;
+}
+.rec-instruct h3 {
+    padding: 2rem 1rem 1rem;
+}
+.rec-instruct {
+    margin: 0 0 3rem 0;
+}
+
+/* search */
+.thesearch {
+    grid-area: icon;
+    --ggs: 1;
+    color: var(--light);
+    background-color: var(--h1);
+    align-self: center;
+    justify-self: start;
+    padding: .75rem;
+}
+#thesearch {
+    --ggs: 1;
+    color: var(--light);
+    padding: 0;
+    margin: 0;
+}
+#searchbar {
+    grid-area: bar;
+    font-family:  lucida_grandebold, sans-serif;
+    font-weight: normal; 
+    font-style: normal;
+    color: var(--dark);
+    padding: 0 0 0 1rem;
+    margin: 1rem 0 1rem 1rem;
+    justify-self: stretch;
+}
+.bar-wrapper {
+    grid-area: barw;
+    display: grid;
+    grid-template-columns: 2fr .25fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "bar icon";
+    width: 100%;
+}
+#meat {
+    grid-area: meat;
+}
+#fish {
+    grid-area: fish;
+}
+#vege {
+    grid-area: vege;
+}
+.home-wrapper {
+    grid-area: grid;
+}
+.dots {
+    grid-area: dot;
+    width: 95%;
+    height: 50%;
+    align-self: flex-start;
+    justify-self: center;
+    border-bottom: 1px dashed var(--h1) ;
+}
+.search-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr auto;
+    grid-template-areas: 
+    "barw barw barw"
+    "meat fish vege"
+    "dot dot dot"
+    "grid grid grid";
+    width: 100vw;
+}
+.filter {
+    background-color: var(--h1);
+    font-family: futura-pt, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: var(--light);
+    text-transform: uppercase;
+    border: none;
+    padding: .75rem;
+    margin: 2rem 1rem 1rem 1rem;
+    font-size: 1rem;
+}
+.filter:hover {
+    background-color: var(--h2);
+    font-family: futura-pt, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: var(--light);
+    text-transform: uppercase;
+    border: none;
+    padding: .75rem;
+    margin: 1rem;
+    font-size: 1rem;
+}
+
+
+/* media queries*/
+@media screen and (min-width:425px) { /* header and grid area, recipe padding */
+    .gg-more-alt {
+        --gg: 1.25;
+    }
+    .gg-search {
+        --gg: 1.25;
+    }
+    .header {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr .5fr .5fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:"logo logo . . . srch more";
+    }
+    .title-text {
+        padding: .25rem .75rem;
+    }
+    .rec-ingred {
+        margin: 2rem .5rem 4rem;
+    }
+    .rec-instruct {
+        margin: 0 .5rem 3rem;
+    }
+}
+@media screen and (min-width: 525px) { /* 2 column & header grid area, recipe main img, padding, rearrangement*/
+    .home-wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+    .header {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr .5fr .5fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:"logo logo . . . . srch more";
+    }
+    .text-box {
+        width: 50%;
+    }
+    .gg-more-alt {
+        --gg: 1.5;
+    }
+    .gg-search {
+        --gg: 1.5;
+    }
+    .recipe-wrapper {
+        padding: 0 2rem;
+    }
+}
+@media screen and (min-width: 630px) {/*recipe L/R padding*/
+    .recipe-wrapper {
+        padding: 0 3rem;
+    }
+}
+@media screen and (min-width: 725px) { /* 3 column, header, recipe switch*/
+    .home-wrapper {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .text-box {
+        width: 33.3333%;
+    }
+    .header {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr .5fr .5fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:"logo logo . . . . . srch more";
+    }
+    .recipe-wrapper {
+        padding: 0 1rem;
+    }
+    .rec-title {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        margin: 3rem 0 5rem 0;
+    }
+    .rec-info {
+        grid-template-columns: 1fr .5fr 1.5fr .25fr .5fr 1.5fr .25fr .5fr 1.5fr 1fr;
+        grid-template-areas: ". gg-time time . gg-bowl serv . gg-heart cal .";
+    }
+    .ingimg {
+        grid-area: photo;
+    }
+    .theing {
+        grid-area: theing;
+    }
+    .ingred-wrap {
+        display: grid;
+        grid-template-columns: .75fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "theing photo";
+        margin: 1rem 0 0 0;
+    }
+    .rec-instruct img{
+        padding: 1rem 3rem;
+    }
+    .rec-instruct {
+        margin: 0 1rem 3rem;
+    }
+    .rec-instruct h2 {
+        padding: 0 .5rem 1rem 0;
+        margin: 0 0 0 -.25rem;
+    }
+}
+@media screen and (min-width:800px) {/*recipe padding*/
+    .recipe-wrapper {
+        padding: 0 2rem;
+    }
+}
+@media screen and (min-width: 900px) { /* 4 column and header */
+    .recipe-wrapper {
+        display: grid;
+        grid-template-columns: .75fr 1fr;
+        grid-auto-rows: auto;
+        grid-template-areas:
+        "title title"
+        "info instruct"
+        "ingred instruct"
+        ". instruct";
+        padding: 0 1.5rem;
+    }
+    .home-wrapper {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .text-box {
+        width: 25%;
+    }
+    .header {
+        grid-template-columns: 1fr .5fr 1fr 1fr 1fr 1fr 1fr 1fr .5fr .5fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:"logo logo . . . . . . srch more";
+    }
+    .ingred-wrap {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+        grid-template-areas: 
+        "photo"
+        "theing";
+    }
+    .rec-ingred img {
+        padding: 1rem 5rem 1rem 1rem;
+    }
+    .rec-info, .rec-ingred {
+        align-self: start;
+    }
+    .rec-info {
+        grid-template-columns: .5fr 1.5fr .25fr .5fr 1.5fr .25fr .5fr 1.5fr;
+        grid-template-areas: "gg-time time . gg-bowl serv . gg-heart cal";
+        width: 90%;
+        border-top: none;
+        padding: .5rem .25rem 2.5rem .5rem;
+        justify-self: start;
+    }
+    .rec-title {
+        margin: 3rem 0 2rem 0;
+        padding: 0 0 4rem 0;
+        border-bottom: 1px dashed var(--h1) ;
+    }
+    .rec-instruct {
+        margin: 1rem 1rem 3rem;
+    }
+    .title-text {
+        padding: .25rem 2rem .25rem 3rem;
+    }
+}
+@media screen and (min-width:1000px) {/*recipe padding*/
+    .recipe-wrapper {
+        display: grid;
+        grid-template-columns: .6fr 1fr;
+        padding: 0 2rem;
+    }
+}
+@media screen and (min-width:1100px) {/*recipe margin*/
+    .recipe-wrapper {
+        display: grid;
+        grid-template-columns: .55fr 1fr;
+        padding: 0 2.5rem;
+    }
 }
