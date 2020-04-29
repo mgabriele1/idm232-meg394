@@ -20,8 +20,17 @@
         <img src="graphics/logo.png" alt="Just a pinch logo" class="logo">
     </a>
     <a href="search.html" class="search">
+        
     </a>
-    <i class="gg-more-alt" id="more"></i>
+    <div id="more" class="dropdown">
+        <span><i class="gg-more-alt"></i></span>
+        <div class="dropdown-content">
+        <h3>HELP</h3>
+        <p>Browse the <a href="index.html">home page</a> to see any of our 40 recipes</p>
+        <p>Click on any of the recipes to see the ingredients and cooking steps</p>
+        <p>Utilize the <a href="search.html">search page</a> and filters to look up what you're in the mood for</p>
+        </div>
+    </div>
 </div>
 <!--SEARCH-->
 <div class="search-wrapper">
@@ -39,16 +48,18 @@
 </div>
 <div class="home-wrapper">
     <div class="home-card"> <!--CARD FOR COPY-->
-        <picture class="home-img">
-            <source media="(min-width: 400px)" srcset="graphics/test/main_pic1_600.jpg"/>
-            <source media="(min-width: 200px)" srcset="graphics/test/main_pic1_400.jpg"/>
-            <img src="graphics/test/main_pic1_200.jpg" alt="plate of food"/>
-        </picture>  
-        <div class="text-box">
-            <h3>Ancho Orange Chicken</h3>
-            <p>with Kale, Rice, & Roasted Carrots</p>
+        <a href="recipe.html"> <!--link-->
+            <picture class="home-img">
+                <source media="(min-width: 400px)" srcset="graphics/test/main_pic1_600.jpg"/>
+                <source media="(min-width: 200px)" srcset="graphics/test/main_pic1_400.jpg"/>
+                <img src="graphics/test/main_pic1_200.jpg" alt="plate of food"/>
+            </picture> 
+        </a> <!--end link-->    
+            <div class="text-box">
+                <h3>Ancho Orange Chicken</h3>
+                <p>with Kale, Rice, & Roasted Carrots</p>
+            </div>
         </div>
-    </div>
     <div class="home-card"> <!--CARD FOR COPY-->
         <picture class="home-img">
             <source media="(min-width: 400px)" srcset="graphics/test/main_pic1_600.jpg"/>
