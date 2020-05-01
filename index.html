@@ -23,8 +23,8 @@
         <i class="gg-search" id="search"></i>
     </a>
     <div id="more" class="dropdown">
-        <span><i class="gg-more-alt"></i></span>
-        <div class="dropdown-content">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="helpicon" id="helpclick"><path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm2-13c0 .28-.21.8-.42 1L10 9.58c-.57.58-1 1.6-1 2.42v1h2v-1c0-.29.21-.8.42-1L13 9.42c.57-.58 1-1.6 1-2.42a4 4 0 1 0-8 0h2a2 2 0 1 1 4 0zm-3 8v2h2v-2H9z"/></svg>
+        <div class="dropdown-content" id="ddcontent">
         <h3>HELP</h3>
         <p>Browse the <a href="index.html">home page</a> to see any of our 40 recipes</p>
         <p>Click on any of the recipes to see the ingredients and cooking steps</p>
@@ -44,8 +44,10 @@
         </picture> 
     </a> <!--end link-->    
         <div class="text-box">
+            <div class="innerbox">
             <h3>Ancho Orange Chicken</h3>
             <p>with Kale, Rice, & Roasted Carrots</p>
+            </div>
         </div>
     </div>
     <div class="home-card">
@@ -55,19 +57,10 @@
             <img src="graphics/test/main_pic2_200.jpg" alt="plate of food"/>
         </picture> 
         <div class="text-box">
+            <div class="innerbox">
             <h3>Beef Medallions and Mushroom Sauce</h3>
             <p>with Mashed Potatoes</p>
-        </div>
-    </div>
-    <div class="home-card">
-        <picture class="home-img">
-            <source media="(min-width: 400px)" srcset="graphics/test/main_pic1_600.jpg"/>
-            <source media="(min-width: 200px)" srcset="graphics/test/main_pic1_400.jpg"/>
-            <img src="graphics/test/main_pic1_200.jpg" alt="plate of food"/>
-        </picture> 
-        <div class="text-box">
-            <h3>Ancho Orange Chicken</h3>
-            <p>with Kale, Rice, & Roasted Carrots</p>
+            </div>
         </div>
     </div>
     <div class="home-card">
@@ -77,10 +70,27 @@
             <img src="graphics/test/main_pic2_200.jpg" alt="plate of food"/>
         </picture> 
         <div class="text-box">
+            <div class="innerbox">
             <h3>Beef Medallions and Mushroom Sauce</h3>
             <p>with Mashed Potatoes</p>
+            </div>
+        </div>
+    </div>
+    <div class="home-card">
+        <picture class="home-img">
+            <source media="(min-width: 400px)" srcset="graphics/test/main_pic2_600.jpg"/>
+            <source media="(min-width: 200px)" srcset="graphics/test/main_pic2_400.jpg"/>
+            <img src="graphics/test/main_pic2_200.jpg" alt="plate of food"/>
+        </picture> 
+        <div class="text-box">
+            <div class="innerbox">
+            <h3>Beef Medallions and Mushroom Sauce</h3>
+            <p>with Mashed Potatoes</p>
+            </div>
         </div>
     </div>
 </div>
+<!--SCRIPT-->
+<script src="script.js"></script>  
 </body>
 </html>
