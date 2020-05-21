@@ -1,0 +1,773 @@
+/*INITIAL STYLING*/
+@import "normalize.css";
+/*icons*/
+@import url('https://css.gg/css?=|bowl|close|heart|more-alt|search|time');
+/*lucida*/
+@font-face {
+    font-family: 'lucida_granderegular';
+    src: url('lucidagrande-01-webfont.woff2') format('woff2'),
+         url('lucidagrande-01-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'lucida_grandebold';
+    src: url('lucidagrande-bold-02-webfont.woff2') format('woff2'),
+         url('lucidagrande-bold-02-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+/* bitter */
+@font-face {
+    font-family: 'bitter';
+    src: url('bitter-regular-webfont.woff') format('woff'),
+         url('bitter-regular-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* libre */
+@font-face {
+    font-family: 'libre_caslon_displayregular';
+    src: url('librecaslondisplay-regular-webfont.woff2') format('woff2'),
+         url('librecaslondisplay-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'libre_caslon_textbold';
+    src: url('librecaslontext-bold-webfont.woff2') format('woff2'),
+         url('librecaslontext-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'libre_caslon_textregular';
+    src: url('librecaslontext-regular-webfont.woff2') format('woff2'),
+         url('librecaslontext-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* stilu */
+@font-face {
+    font-family: 'stilubold';
+    src: url('stilu-bold-webfont.woff2') format('woff2'),
+         url('stilu-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'stilulight';
+    src: url('stilu-light-webfont.woff2') format('woff2'),
+         url('stilu-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'stiluregular';
+    src: url('stilu-regular-webfont.woff2') format('woff2'),
+         url('stilu-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'stilusemibold';
+    src: url('stilu-semibold-webfont.woff2') format('woff2'),
+         url('stilu-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* source sans pro */
+
+
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* colors*/
+:root {
+    --h1: #3D3D3D;
+    --h2: #D50000;
+    --accent1: #FFA500;
+    --accent2: #F6C700;
+    --dark: #212121;
+    --light: #F6F6F6;
+    --lighter: white;
+}
+/* headings*/
+body {
+    width: 100%;
+    background-color: var(--light);
+}
+h1 {
+    font-family: libre_caslon_textregular,serif;
+    font-style: normal;
+    color: var(--h1);
+}
+h2 {
+    font-family:  libre_caslon_textregular, sans-serif; /*regular*/
+    font-weight: normal; 
+    font-style: normal;
+    color: var(--h2);
+    text-transform: uppercase;
+}
+h3 {
+    font-family: stilulight, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: var(--dark);
+    text-transform: uppercase;
+}
+h4 { /*header*/
+    font-family:  libre_caslon_textbold, sans-serif;
+    font-style: normal;
+    color: var(--light);
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 3px var(--dark);
+}
+p, ul {
+    font-family: stilulight, sans-serif;
+    font-weight: 400; /* 400i, 500, 700*/
+    font-style: normal;
+    color: var(--dark);
+}
+/* images */
+img {
+    max-width:100%;
+    height:auto;
+}
+
+/* icons */
+.gg-search {
+--ggs: .85;
+color: var(--h1);
+}
+.search {
+    display: block;
+    padding: 1rem;
+}
+.gg-search:hover {
+color: var(--h2);
+}
+.helpicon {
+fill: var(--h1);
+width: 1rem;
+margin: .2rem 0 0 0;
+}
+.helpicon:hover {
+fill: var(--h2);
+}
+/* dropdown */
+.menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding: .25rem;
+    background-color: var(--h1);
+}
+h5, h6 {
+    text-transform: uppercase;
+    font-size: .8rem;
+    font-family: futura-pt, sans-serif;
+    font-weight: 400; /* 400i, 500, 700*/
+    font-style: normal;
+    color: var(--light);
+    padding: .25rem .5rem;
+}
+h5 {
+    text-align: right;
+}
+h6 {
+    border-left: 1px solid var(--light);
+}
+.dropdown2 {
+    position: relative;
+    display: inline-block;
+}
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+.testdrop {
+    display: none;
+    position: absolute;
+    background-color: var(--light);
+    z-index: 100;
+    width: 100%;
+    padding: 1rem 1rem 0;
+}
+.testdrop b {
+    font-weight: 500;
+    color:
+     var(--h2);
+}
+.testdrop p {
+    margin: 0 auto 1rem;
+}
+.testdrop2 {
+    display: none;
+    position: absolute;
+    background-color: var(--light);
+    z-index: 100;
+    width: 100%;
+    padding: 1rem 0 0;
+}
+.testdrop2 p {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding: 1rem;
+    margin: 0 0 1rem;
+}
+.unclicked:hover {
+    background-color: var(--h1);
+    color: var(--light);
+}
+.clicked {
+    background-color: var(--h2);
+    color: var(--light);
+}
+
+/* grids */
+/* header */
+.header h4 {
+    grid-area: title;
+}
+.testsearch {
+    grid-area: search;
+}
+.header {
+    background-image: url(graphics/headerphoto.jpg);
+    background-repeat: none;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.5fr 1fr;
+    grid-template-areas: 
+    "title"
+    "search";
+    align-items: center;
+    justify-items: center;
+    height: 12rem;
+    width: 100%;
+    max-width: 1700px;
+    margin: 0 auto;
+}
+.testsearch {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: all;
+   
+}
+.testicon {
+    grid-area: all;
+    background-color: var(--h1);
+    width: 1.75rem;
+    height:1.75rem;
+    align-self: center;
+    justify-self: flex-end;
+    display: flex;
+    padding: .25rem 0 0 .3rem;
+    border-radius: 0 10px 10px 0;
+}
+#testicon {
+    --ggs: 1;
+    color: var(--light);
+    padding: 0;
+    margin: 0;
+}
+#testbar {
+    grid-area: bar;
+    font-family:  futura-pt, sans-serif;
+    font-weight: 400; 
+    font-style: normal;
+    text-transform: uppercase;
+    color: var(--dark);
+    justify-self: stretch;
+    grid-area: all;
+    width: 12rem;
+    border: none;
+    border-radius: 10px;
+}
+
+/* home */
+@media screen and (min-width: 1100px) {
+    .home-card {
+        min-width: 300px;
+    }
+}
+.home-wrap {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    align-content: flex-start;
+    max-width: 1700px;
+    margin: 0 auto;
+}
+.home-card {
+    border-radius: 15px;
+    flex: 2 1 200px;
+    min-width: 200px;
+    max-width: 400px;
+    background-color: var(--lighter);
+    margin: 1rem 1rem 0;
+}
+.home-card p{
+text-transform: uppercase;
+font-weight: 500;
+color: var(--dark);
+font-size: .75rem;
+}
+
+.home-card h3 {
+font-family:  lucida_grandebold, sans-serif;
+font-weight: normal; 
+font-style: normal;
+color: var(--h1);
+font-size: 1rem;
+padding: 0 0 .5rem;
+}
+
+.home-card a {
+    text-decoration: none;
+}
+
+.textbox {
+    width: 100%;
+    padding: .5rem 1rem 1rem;
+}
+.innerbox {
+    padding: .25rem .7rem;
+}
+.innerbox p {
+    padding: .25rem 0;
+}
+
+.home-img {
+  
+}
+
+.home-img img {
+    border-radius: 15px 15px 0 0;
+}
+
+/* recipe */
+.rec-title {
+    grid-area: title;
+}
+.rec-info {
+    grid-area: info;
+}
+.rec-ingred {
+    grid-area: ingred;
+}
+.rec-instruct {
+    grid-area: instruct;
+}
+.recipe-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    grid-template-areas:
+    "title"
+    "info"
+    "ingred"
+    "instruct";
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+    max-width: 1700px;
+    margin: 0 auto;
+}
+.gg-time {
+    grid-area: gg-time;
+}
+.time {
+    grid-area: time;
+}
+.gg-bowl {
+    grid-area: gg-bowl;
+}
+.serv {
+    grid-area: serv;
+}
+.gg-heart {
+    grid-area: gg-heart;
+}
+.cal {
+    grid-area: cal;
+}
+.rec-info {
+    grid-area: info;
+    display: grid;
+    grid-template-columns: .5fr 1.5fr .25fr .5fr 1.5fr .25fr .5fr 1.5fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "gg-time time . gg-bowl serv . gg-heart cal";
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    padding: 1.5rem .25rem;
+    color: var(--h2);
+    margin: 0 0 3rem 0;
+    border-bottom: 1px dashed var(--h1) ;
+    border-top: 1px dashed var(--h1) ;
+}
+.rec-info p {
+    color: var(--h1);
+}
+.title-text {
+    padding: .25rem;
+}
+.title-text p {
+    padding: .5rem;
+    margin: 2rem 0 3rem 0;
+    line-height: 1.5;
+}
+.rec-ingred {
+margin: 2rem 0 4rem;
+}
+.rec-ingred h2, .rec-instruct h2 {
+    padding: 0 .5rem 1rem .25rem;
+}
+.rec-ingred img, .rec-instruct img {
+    padding: 1rem;
+}
+.rec-ingred ul {
+    list-style-type: none;
+    padding: 1rem;
+    line-height: 1.5;
+}
+.rec-instruct p {
+    padding: 1rem 1rem 2rem 1rem;
+    line-height: 1.5;
+}
+.rec-instruct h3 {
+    padding: 2rem 1rem 1rem;
+}
+.rec-instruct {
+    margin: 0 0 3rem 0;
+}
+
+/* search */
+.thesearch {
+    grid-area: icon;
+    --ggs: 1;
+    color: var(--light);
+    background-color: var(--h1);
+    align-self: center;
+    justify-self: start;
+    padding: 1.1rem 1rem;
+}
+#thesearch {
+    --ggs: 1;
+    color: var(--light);
+    padding: 0;
+    margin: 0;
+}
+#searchbar {
+    grid-area: bar;
+    font-family:  lucida_grandebold, sans-serif;
+    font-weight: normal; 
+    font-style: normal;
+    color: var(--dark);
+    padding: 0 0 0 1rem;
+    margin: 1rem 0;
+    justify-self: stretch;
+}
+.thesearch:hover {
+    color: var(--light);
+    background-color: var(--h2);
+}
+.bar-wrapper {
+    grid-area: barw;
+    display: grid;
+    grid-template-columns: 2fr .25fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "bar icon";
+    max-width: 100%;
+    padding: 0 1rem;
+}
+#meat {
+    grid-area: meat;
+}
+#fish {
+    grid-area: fish;
+}
+#vege {
+    grid-area: vege;
+}
+.home-wrapper {
+    grid-area: grid;
+}
+.dots {
+    grid-area: dot;
+    width: 95%;
+    height: 50%;
+    align-self: flex-start;
+    justify-self: center;
+    border-bottom: 1px dashed var(--h1) ;
+}
+.search-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr auto;
+    grid-template-areas: 
+    "barw barw barw"
+    "meat fish vege"
+    "dot dot dot"
+    "grid grid grid";
+    max-width: 100vw;
+    justify-content: center;
+    align-content: center;
+    max-width: 1700px;
+    margin: 0 auto;
+}
+.filter {
+    background-color: var(--h1);
+    font-family: futura-pt, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: var(--light);
+    text-transform: uppercase;
+    border: none;
+    padding: .75rem;
+    margin: 2rem 1rem 1rem 1rem;
+    font-size: 1rem;
+}
+.filter:hover {
+    background-color: var(--h2);
+    font-family: futura-pt, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: var(--light);
+    text-transform: uppercase;
+    border: none;
+    padding: .75rem;
+    margin: 2rem 1rem 1rem 1rem;
+    font-size: 1rem;
+}
+
+/* media queries*/
+@media screen and (min-width:425px) { /* header and grid area, recipe padding, search bar filters and button */
+    .helpicon {
+        width: 1.1rem;
+    }
+    .gg-search {
+        --gg: 1.25;
+    }
+    .title-text {
+        padding: .25rem .75rem;
+    }
+    .rec-ingred {
+        margin: 2rem .5rem 4rem;
+    }
+    .rec-instruct {
+        margin: 0 .5rem 3rem;
+    }
+    .bar-wrapper {
+        padding: .5rem 1.5rem;
+    }
+    .thesearch {
+        padding:.75rem;
+    }
+    .filter {
+        margin: 2rem 1.5rem 1rem;
+    }
+    .filter:hover {
+        margin: 2rem 1.5rem 1rem;
+    }
+}
+@media screen and (min-width: 525px) { /* 2 column & header grid area, recipe main img, padding, rearrangement*/
+    .home-wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+    .text-box {
+        width: 50%;
+    }
+    .helpicon {
+        width: 1.2rem;
+    }
+    .gg-search {
+        --gg: 1.5;
+    }
+    .recipe-wrapper {
+        padding: 0 2rem;
+    }
+}
+@media screen and (min-width: 630px) {/*recipe L/R padding, search bar filters and padding*/
+    .recipe-wrapper {
+        padding: 0 3rem;
+    }
+    .bar-wrapper {
+        padding: .5rem 2rem;
+    }
+    .thesearch {
+        padding:.75rem;
+    }
+    .filter {
+        margin: 2rem 2.5rem 1rem;
+    }
+    .filter:hover {
+        margin: 2rem 2.5rem 1rem;
+    }
+}
+@media screen and (min-width: 725px) { /* 3 column, header, recipe switch, search grid, dropdown widen*/
+    .home-wrapper {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .text-box {
+        width: 33.3333%;
+    }
+    .recipe-wrapper {
+        padding: 0 1rem;
+    }
+    .rec-title {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        margin: 3rem 0 5rem 0;
+    }
+    .rec-info {
+        grid-template-columns: 1fr .5fr 1.5fr .25fr .5fr 1.5fr .25fr .5fr 1.5fr 1fr;
+        grid-template-areas: ". gg-time time . gg-bowl serv . gg-heart cal .";
+    }
+    .ingimg {
+        grid-area: photo;
+    }
+    .theing {
+        grid-area: theing;
+    }
+    .ingred-wrap {
+        display: grid;
+        grid-template-columns: .75fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "theing photo";
+        margin: 1rem 0 0 0;
+    }
+    .rec-instruct img{
+        padding: 1rem 3rem;
+    }
+    .rec-instruct {
+        margin: 0 1rem 3rem;
+    }
+    .rec-instruct h2 {
+        padding: 0 .5rem 1rem 0;
+        margin: 0 0 0 -.25rem;
+    }
+    .search-wrapper {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr auto;
+        grid-template-areas: 
+        ". barw barw barw ."
+        ". meat fish vege ."
+        "dot dot dot dot dot"
+        "grid grid grid grid grid";
+        max-width: 100vw;
+        justify-content: center;
+        align-content: center;
+    }
+    .bar-wrapper {
+        padding: .5rem 0;
+    }
+    .filter {
+        margin: 2rem 2rem 1rem;
+    }
+    .filter:hover {
+        margin: 2rem 2rem 1rem;
+    }
+    .dropdown-content {
+        min-width: 350px;
+    }
+}
+@media screen and (min-width:800px) {/*recipe padding*/
+    .recipe-wrapper {
+        padding: 0 2rem;
+    }
+}
+@media screen and (min-width: 900px) { /* 4 column and header */
+    .recipe-wrapper {
+        display: grid;
+        grid-template-columns: .75fr 1fr;
+        grid-auto-rows: auto;
+        grid-template-areas:
+        "title title"
+        "info instruct"
+        "ingred instruct"
+        ". instruct";
+        padding: 0 1.5rem;
+    }
+    .home-wrapper {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .text-box {
+        width: 25%;
+        max-width: 26.55rem;
+    }
+    .ingred-wrap {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+        grid-template-areas: 
+        "photo"
+        "theing";
+    }
+    .rec-ingred img {
+        padding: 1rem 5rem 1rem 1rem;
+    }
+    .rec-info, .rec-ingred {
+        align-self: start;
+    }
+    .rec-info {
+        grid-template-columns: .5fr 1.5fr .25fr .5fr 1.5fr .25fr .5fr 1.5fr;
+        grid-template-areas: "gg-time time . gg-bowl serv . gg-heart cal";
+        width: 90%;
+        border-top: none;
+        padding: .5rem .25rem 2.5rem .5rem;
+        justify-self: start;
+    }
+    .rec-title {
+        margin: 3rem 0 2rem 0;
+        padding: 0 0 4rem 0;
+        border-bottom: 1px dashed var(--h1) ;
+    }
+    .rec-instruct {
+        margin: 1rem 1rem 3rem;
+    }
+    .title-text {
+        padding: .25rem 2rem .25rem 3rem;
+    }
+}
+@media screen and (min-width:1000px) {/*recipe padding, search*/
+    .recipe-wrapper {
+        display: grid;
+        grid-template-columns: .6fr 1fr;
+        padding: 0 2rem;
+    }
+    .filter {
+        margin: 2rem 2.5rem 1rem;
+    }
+    .filter:hover {
+        margin: 2rem 2.5rem 1rem;
+    }
+}
+@media screen and (min-width:1100px) {/*recipe margin*/
+    .recipe-wrapper {
+        display: grid;
+        grid-template-columns: .55fr 1fr;
+        padding: 0 2.5rem;
+    }
+}
+
+
