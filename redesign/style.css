@@ -1,0 +1,580 @@
+/*INITIAL STYLING*/
+@import "normalize.css";
+/*icons*/
+@import url('https://css.gg/css?=|bowl|close|heart|more-alt|search|time');
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/*  FONTS */
+/* source sand pro */
+@font-face {
+    font-family: 'source_sans_pro';
+    src: url('sourcesanspro-bold-webfont.woff2') format('woff2'),
+         url('sourcesanspro-bold-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: bold;
+}
+@font-face {
+    font-family: 'source_sans_pro';
+    src: url('sourcesanspro-light-webfont.woff2') format('woff2'),
+         url('sourcesanspro-light-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'source_sans_pro';
+    src: url('sourcesanspro-regular-webfont.woff2') format('woff2'),
+         url('sourcesanspro-regular-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* stilu */
+@font-face {
+    font-family: 'stilu';
+    src: url('stilu-bold-webfont.woff2') format('woff2'),
+         url('stilu-bold-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: bold;
+}
+@font-face {
+    font-family: 'stilu';
+    src: url('stilu-light-webfont.woff2') format('woff2'),
+         url('stilu-light-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;;
+}
+@font-face {
+    font-family: 'stilu';
+    src: url('stilu-regular-webfont.woff2') format('woff2'),
+         url('stilu-regular-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'stilu';
+    src: url('stilu-semibold-webfont.woff2') format('woff2'),
+         url('stilu-semibold-webfont.woff') format('woff');
+    font-weight: 600;
+    font-style: bold;
+}
+
+/* libre calson */
+@font-face {
+    font-family: 'libre_caslon';
+    src: url('librecaslondisplay-regular-webfont.woff2') format('woff2'),
+         url('librecaslondisplay-regular-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'libre_caslon';
+    src: url('librecaslontext-bold-webfont.woff2') format('woff2'),
+         url('librecaslontext-bold-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: bold;
+}
+@font-face {
+    font-family: 'libre_caslon';
+    src: url('librecaslontext-regular-webfont.woff2') format('woff2'),
+         url('librecaslontext-regular-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* ROOT COLORS AND FONTS */
+:root {
+    /* colors */
+    --h1: #521527;
+    --h2: #D50000;
+    --accent1: #FFA500;
+    --accent2: #F6C700;
+    --grey: #3b3b3b;
+    --dark: #212121;
+    --light: #F6F6F6;
+    --lighter: white;
+    /* fonts */
+    
+}
+/* headings*/
+body {
+    width: 100%;
+    background-color: var(--light);
+}
+h1 { /* recipe title */
+    font-family: libre_caslon_textregular,serif;
+    font-style: normal;
+    color: var(--h1);
+}
+h2 { /* recipe section headings */
+    font-family:  libre_caslon_textregular, sans-serif; /*regular*/
+    font-weight: normal; 
+    font-style: normal;
+    color: var(--h2);
+    text-transform: uppercase;
+}
+h3 { /* recipe subtitle/ step title/ card title */
+    font-family: libre_caslon, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--dark);
+    text-transform: uppercase;
+}
+h4 { /* header */
+    font-family: libre_caslon, sans-serif;
+    font-weight: 700;
+    color: var(--light);
+    font-size: 2.75rem;
+    text-shadow: 2px 2px 3px var(--dark);
+}
+h5, h6 { /* dropdown */
+    text-transform: uppercase;
+    font-size: .8rem;
+    font-family: stilu, sans-serif;
+    font-weight: 400; /* 400i, 500, 700*/
+    font-style: normal;
+    color: var(--light);
+    padding: .25rem .5rem;
+}
+p, ul { /* card subheading/ recipe text */
+    font-family: source_sans_pro, sans-serif;
+    font-weight: 300; /* 400i, 500, 700*/
+    font-style: normal;
+    color: var(--dark);
+}
+/* images */
+img {
+    max-width:100%;
+    height:auto;
+}
+
+/* dropdown */
+.menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding: .25rem;
+    background-color: var(--h1);
+    max-width: 1700px;
+    margin: 0 auto;
+}
+.drop p, .drop2 p {
+    font-family: stilu;
+    font-weight: 300;
+    font-size: .8rem;
+}
+h5 {
+    text-align: right;
+}
+
+h6 {
+    border-left: 1px solid var(--light);
+}
+.drop, .drop2 {
+    display: none;
+    position: absolute;
+    background-color: var(--light);
+    border-top: 4px solid var(--h1);
+    box-shadow: 1px 1px 10px var(--grey);
+    border-radius: 0 0 5px 5px;
+    z-index: 100;
+    width: 50%;
+    max-width: 250px;
+    padding: 1rem 1rem 0;
+}
+.drop2 {
+    right: 50%;
+}
+.drop b {
+    font-weight: 400;
+    color: var(--h1);
+}
+.drop p {
+    margin: 0 auto 1rem;
+}
+.drop2 p {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1rem;
+    margin: 0 0 1rem;
+}
+.unclicked:hover {
+    background-color: var(--h1);
+    color: var(--light);
+}
+.clicked {
+    background-color: var(--h2);
+    color: var(--light);
+}
+
+/* header */
+.header h4 {
+    grid-area: title;
+}
+.search-wrapper {
+    grid-area: search;
+}
+.header {
+    background-image: url(graphics/headerphoto.jpg);
+    background-repeat: none;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas: 
+    "title"
+    "search";
+    align-items: center;
+    justify-items: center;
+    height: 13rem;
+    width: 100%;
+    max-width: 1700px;
+    margin: 0 auto;
+}
+.search-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: all;
+    align-self: flex-start;
+}
+.sicon {
+    grid-area: all;
+    background-color: var(--h1);
+    width: 1.5rem;
+    height:1.5rem;
+    align-self: center;
+    justify-self: flex-end;
+    display: flex;
+    padding: .2rem 0 0 .2rem;
+    margin: 0 .25rem 0 0;
+    border-radius: 15px;
+    box-shadow: .25px .25px 1px var(--grey);
+}
+#sicon {
+    --ggs: .6;
+    color: var(--light);
+    padding: 0;
+    margin: 0;
+}
+#sbar {
+    grid-area: bar;
+    font-family:  source_sans_pro, sans-serif;
+    font-weight: 300; 
+    font-style: normal;
+    font-size: .9rem;
+    padding: .5rem;
+    text-transform: uppercase;
+    color: var(--dark);
+    justify-self: stretch;
+    grid-area: all;
+    width: 15rem;
+    height: 1.75rem;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 1px 1px 10px var(--grey);
+}
+
+/* home */
+.home-wrap {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    align-content: flex-start;
+    max-width: 1700px;
+    margin: 0 auto;
+}
+.home-card {
+    border-radius: 15px;
+    flex: 2 1 200px;
+    min-width: 200px;
+    max-width: 400px;
+    background-color: var(--lighter);
+    margin: 1rem 1rem 0;
+    box-shadow: 1px 1px 5px var(--grey);
+}
+.home-card p{
+    text-transform: uppercase;
+    font-weight: 400;
+    color: var(--dark);
+    font-size: .75rem;
+}
+
+.home-card h3 {
+    font-family:  libre_caslon, sans-serif;
+    font-weight: 400; 
+    color: var(--h1);
+    font-size: 1.2rem;
+    padding: 0 0 .5rem;
+    text-transform: capitalize;
+}
+
+.home-card a {
+    text-decoration: none;
+}
+
+.textbox {
+    width: 100%;
+    padding: .5rem 1rem 1rem;
+}
+
+.home-img img {
+    border-radius: 15px 15px 0 0;
+}
+
+/* recipe */
+.rec-title {
+    grid-area: title;
+}
+.rec-info {
+    grid-area: info;
+}
+.rec-ingred {
+    grid-area: ingred;
+}
+.rec-instruct {
+    grid-area: instruct;
+}
+.recipe-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    grid-template-areas:
+    "title"
+    "info"
+    "ingred"
+    "instruct";
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+    max-width: 1700px;
+    margin: 0 auto;
+}
+.gg-time {
+    grid-area: gg-time;
+}
+.time {
+    grid-area: time;
+}
+.gg-bowl {
+    grid-area: gg-bowl;
+}
+.serv {
+    grid-area: serv;
+}
+.gg-heart {
+    grid-area: gg-heart;
+}
+.cal {
+    grid-area: cal;
+}
+.rec-info {
+    grid-area: info;
+    display: grid;
+    grid-template-columns: .5fr 1.5fr .25fr .5fr 1.5fr .25fr .5fr 1.5fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "gg-time time . gg-bowl serv . gg-heart cal";
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    padding: 1.5rem .25rem;
+    color: var(--h2);
+    margin: 0 0 3rem 0;
+    border-bottom: 1px dashed var(--h1) ;
+    border-top: 1px dashed var(--h1) ;
+}
+.rec-info p {
+    color: var(--h1);
+}
+.title-text {
+    padding: .25rem;
+}
+.title-text p {
+    padding: .5rem;
+    margin: 2rem 0 3rem 0;
+    line-height: 1.5;
+}
+.rec-ingred {
+margin: 2rem 0 4rem;
+}
+.rec-ingred h2, .rec-instruct h2 {
+    padding: 0 .5rem 1rem .25rem;
+}
+.rec-ingred img, .rec-instruct img {
+    padding: 1rem;
+}
+.rec-ingred ul {
+    list-style-type: none;
+    padding: 1rem;
+    line-height: 1.5;
+}
+.rec-instruct p {
+    padding: 1rem 1rem 2rem 1rem;
+    line-height: 1.5;
+}
+.rec-instruct h3 {
+    padding: 2rem 1rem 1rem;
+}
+.rec-instruct {
+    margin: 0 0 3rem 0;
+}
+
+
+/* media queries*/
+@media screen and (min-width:425px) { /* recipe page, header */
+    .title-text {
+        padding: .25rem .75rem;
+    }
+    .rec-ingred {
+        margin: 2rem .5rem 4rem;
+    }
+    .rec-instruct {
+        margin: 0 .5rem 3rem;
+    }
+    .bar-wrapper {
+        padding: .5rem 1.5rem;
+    }
+    .header {
+        height: 14rem;
+    }
+}
+@media screen and (min-width: 525px) { /* recipe page, header */
+    .recipe-wrapper {
+        padding: 0 2rem;
+    }
+    .header {
+        height: 15rem;
+    }
+    h4 {
+        font-size: 3rem;
+    }
+}
+@media screen and (min-width: 630px) {/* recipe page */
+    .recipe-wrapper {
+        padding: 0 3rem;
+    }
+}
+@media screen and (min-width: 725px) { /* recipe page, header */
+    .recipe-wrapper {
+        padding: 0 1rem;
+    }
+    .rec-title {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        margin: 3rem 0 5rem 0;
+    }
+    .rec-info {
+        grid-template-columns: 1fr .5fr 1.5fr .25fr .5fr 1.5fr .25fr .5fr 1.5fr 1fr;
+        grid-template-areas: ". gg-time time . gg-bowl serv . gg-heart cal .";
+    }
+    .ingimg {
+        grid-area: photo;
+    }
+    .theing {
+        grid-area: theing;
+    }
+    .ingred-wrap {
+        display: grid;
+        grid-template-columns: .75fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "theing photo";
+        margin: 1rem 0 0 0;
+    }
+    .rec-instruct img{
+        padding: 1rem 3rem;
+    }
+    .rec-instruct {
+        margin: 0 1rem 3rem;
+    }
+    .rec-instruct h2 {
+        padding: 0 .5rem 1rem 0;
+        margin: 0 0 0 -.25rem;
+    }
+    .header {
+        height: 16rem;
+    }
+}
+@media screen and (min-width:800px) {/* recipe page */
+    .recipe-wrapper {
+        padding: 0 2rem;
+    }
+    .header {
+        height: 18rem;
+    }
+}
+@media screen and (min-width: 900px) { /* recipe page */
+    .recipe-wrapper {
+        display: grid;
+        grid-template-columns: .75fr 1fr;
+        grid-auto-rows: auto;
+        grid-template-areas:
+        "title title"
+        "info instruct"x
+        "ingred instruct"
+        ". instruct";
+        padding: 0 1.5rem;
+    }
+    .ingred-wrap {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+        grid-template-areas: 
+        "photo"
+        "theing";
+    }
+    .rec-ingred img {
+        padding: 1rem 5rem 1rem 1rem;
+    }
+    .rec-info, .rec-ingred {
+        align-self: start;
+    }
+    .rec-info {
+        grid-template-columns: .5fr 1.5fr .25fr .5fr 1.5fr .25fr .5fr 1.5fr;
+        grid-template-areas: "gg-time time . gg-bowl serv . gg-heart cal";
+        width: 90%;
+        border-top: none;
+        padding: .5rem .25rem 2.5rem .5rem;
+        justify-self: start;
+    }
+    .rec-title {
+        margin: 3rem 0 2rem 0;
+        padding: 0 0 4rem 0;
+        border-bottom: 1px dashed var(--h1) ;
+    }
+    .rec-instruct {
+        margin: 1rem 1rem 3rem;
+    }
+    .title-text {
+        padding: .25rem 2rem .25rem 3rem;
+    }
+    .header {
+        height: 19rem;
+    }
+}
+@media screen and (min-width:1000px) {/* recipe page */
+    .recipe-wrapper {
+        display: grid;
+        grid-template-columns: .6fr 1fr;
+        padding: 0 2rem;
+    }
+}
+@media screen and (min-width:1100px) {/* recipe margin */
+    .recipe-wrapper {
+        display: grid;
+        grid-template-columns: .55fr 1fr;
+        padding: 0 2.5rem;
+    }
+    .home-card {
+            min-width: 300px;
+    }
+    .header {
+        height: 20rem;
+    }
+}
+
+
