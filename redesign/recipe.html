@@ -15,23 +15,59 @@
 <!--BODY-->
 <body>
 <!--HEADER-->
+<!--HEADER-->
 <div class="header">
-    <a href="index.html" class="logo">
-        <img src="graphics/logo.png" alt="Just a pinch logo" class="logo">
-    </a>
-    <a href="search.html" class="search">
-        <i class="gg-search" id="search"></i>
-    </a>
-    <div id="more" class="dropdown">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="helpicon" id="helpclick"><path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm2-13c0 .28-.21.8-.42 1L10 9.58c-.57.58-1 1.6-1 2.42v1h2v-1c0-.29.21-.8.42-1L13 9.42c.57-.58 1-1.6 1-2.42a4 4 0 1 0-8 0h2a2 2 0 1 1 4 0zm-3 8v2h2v-2H9z"/></svg>
-        <div class="dropdown-content" id="ddcontent">
-        <h3>HELP</h3>
-        <p>Browse the <a href="index.html">home page</a> to see any of our 40 recipes</p>
-        <p>Click on any of the recipes to see the ingredients and cooking steps</p>
-        <p>Utilize the <a href="search.html">search page</a> and filters to look up what you're in the mood for</p>
+    <h4>Just a Pinch</h4>
+    <div class="search-wrapper">
+        <input type="text" placeholder="  Search..." id="sbar">
+        <div class="sicon">
+            <i class="gg-search" id="sicon"></i>
         </div>
     </div>
 </div>
+<!--DROPDOWN-->
+<div class="menu">
+    <div id="more" class="dropdown2">
+        <h5 id="helpclick2">
+            filter
+        </h5>
+        <div class="drop2" id="ddcontent2">
+            <p id="meat">Meat</p>
+            <p id="sea"> Seafood</p>
+            <p id="vege">Vegetarian</p>
+        </div>
+    </div>
+    <div id="more" class="dropdown">
+        <h6 id="helpclick">
+            help
+        </h6>
+        <div class="drop" id="ddcontent">
+        <p>Browse <b>below</b> to see the collection of recipes</p>
+        <p><b>Click</b> on any of the recipes to see the ingredients and cooking steps</p>
+        <p>Use the <b>filters</b> option to the left to filter results by meal type</p>
+        <p>The <b>search bar</b> above can be used to look up recipes by name, ingredient, cook time, etc.</p>
+        </div>
+    </div>
+</div>
+<!--HIDDEN FILTERS-->
+<div class="hidden-filter">
+    <div class="meat-h" id="meat-h">
+        <p>
+            Meat
+        </p>
+    </div>
+    <div class="sea-h" id="sea-h">
+        <p>
+            Seafood
+        </p>
+    </div>
+    <div class="vege-h" id="vege-h">
+        <p>
+            Vegetarian
+        </p>
+    </div>
+</div>
+
 <!--RECIPE-->
 <div class="recipe-wrapper">
     <!--TITLE-->

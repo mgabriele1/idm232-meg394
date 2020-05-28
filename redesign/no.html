@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--HEAD-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Just a Pinch</title>
+    <link rel="stylesheet" href="https://use.typekit.net/qcz2dur.css">
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <link rel="icon" href="graphics/favicon.ico" type="image/x-icon"/>
+    <link href="https://css.gg/css?=|bowl|close|heart|more-alt|search|time" rel="stylesheet">
+</head>
+
+<!--BODY-->
+<body>
+<!--HEADER-->
+<div class="header">
+    <h4>Just a Pinch</h4>
+    <div class="search-wrapper">
+        <input type="text" placeholder="  Search..." id="sbar">
+        <div class="sicon">
+            <i class="gg-search" id="sicon"></i>
+        </div>
+    </div>
+</div>
+<!--DROPDOWN-->
+<div class="menu">
+    <div id="more" class="dropdown2">
+        <h5 id="helpclick2">
+            filter
+        </h5>
+        <div class="drop2" id="ddcontent2">
+            <p id="meat">Meat</p>
+            <p id="sea"> Seafood</p>
+            <p id="vege">Vegetarian</p>
+        </div>
+    </div>
+    <div id="more" class="dropdown">
+        <h6 id="helpclick">
+            help
+        </h6>
+        <div class="drop" id="ddcontent">
+        <p>Browse <b>below</b> to see the collection of recipes</p>
+        <p><b>Click</b> on any of the recipes to see the ingredients and cooking steps</p>
+        <p>Use the <b>filters</b> option to the left to filter results by meal type</p>
+        <p>The <b>search bar</b> above can be used to look up recipes by name, ingredient, cook time, etc.</p>
+        </div>
+    </div>
+</div>
+<!--HIDDEN FILTERS-->
+<div class="hidden-filter">
+    <div class="meat-h" id="meat-h">
+        <p>
+            Meat
+        </p>
+    </div>
+    <div class="sea-h" id="sea-h">
+        <p>
+            Seafood
+        </p>
+    </div>
+    <div class="vege-h" id="vege-h">
+        <p>
+            Vegetarian
+        </p>
+    </div>
+</div>
+
+<!--NO RESULTS-->
+<div class="no-wrapper">
+    <img src="graphics/noresults.gif" alt="no results" class="noresults">
+</div>
+</div>
+<!--SCRIPT-->
+<script src="script.js"></script>  
+</body>
+</html>
