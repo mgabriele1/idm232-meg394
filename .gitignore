@@ -24,4 +24,4 @@ $RECYCLE.BIN/
 *.lnk
 
 # My Files
-phpinclude/includes/_db.php
+../phpinclude/includes/_db.php
