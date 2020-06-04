@@ -24,4 +24,4 @@ $RECYCLE.BIN/
 *.lnk
 
 # My Files
-graphics/toignore/
+phpinclude/includes/_db.php
