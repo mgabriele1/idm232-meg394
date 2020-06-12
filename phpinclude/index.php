@@ -73,6 +73,9 @@ $filter = $_GET['filter'];
 
     <div class="home-card"> <!--PLACEHOLDER FOR STYLING--> </div>
     <div class="home-card"> <!--PLACEHOLDER FOR STYLING--> </div>
+    <div class="home-card"> <!--PLACEHOLDER FOR STYLING--> </div>
+    <div class="home-card"> <!--PLACEHOLDER FOR STYLING--> </div>
+    <div class="home-card"> <!--PLACEHOLDER FOR STYLING--> </div>
 </div>
 </div>
 

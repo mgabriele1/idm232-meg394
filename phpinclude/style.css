@@ -20,7 +20,7 @@
     src: url('sourcesanspro-bold-webfont.woff2') format('woff2'),
          url('sourcesanspro-bold-webfont.woff') format('woff');
     font-weight: 700;
-    font-style: bold;
+    font-style: normal;
 } 
 @font-face {
     font-family: 'source_sans_pro';
@@ -43,14 +43,14 @@
     src: url('stilu-bold-webfont.woff2') format('woff2'),
          url('stilu-bold-webfont.woff') format('woff');
     font-weight: 700;
-    font-style: bold;
+    font-style: normal;
 }
 @font-face {
     font-family: 'stilu';
     src: url('stilu-light-webfont.woff2') format('woff2'),
          url('stilu-light-webfont.woff') format('woff');
     font-weight: 300;
-    font-style: normal;;
+    font-style: normal;
 }
 @font-face {
     font-family: 'stilu';
@@ -64,7 +64,7 @@
     src: url('stilu-semibold-webfont.woff2') format('woff2'),
          url('stilu-semibold-webfont.woff') format('woff');
     font-weight: 600;
-    font-style: bold;
+    font-style: normal;
 }
 
 /* libre calson */
@@ -80,7 +80,7 @@
     src: url('librecaslontext-bold-webfont.woff2') format('woff2'),
          url('librecaslontext-bold-webfont.woff') format('woff');
     font-weight: 700;
-    font-style: bold;
+    font-style: normal;
 }
 @font-face {
     font-family: 'libre_caslon';
@@ -90,9 +90,8 @@
     font-style: normal;
 }
 
-/* ROOT COLORS AND FONTS */
+/* ROOT COLORS */
 :root {
-    /* colors */
     --h1: #521527;
     --h2: #D50000;
     --accent1: #FFA500;
@@ -101,8 +100,6 @@
     --dark: #212121;
     --light: #F6F6F6;
     --lighter: white;
-    /* fonts */
-    
 }
 /* headings*/
 body {
@@ -317,7 +314,7 @@ img {
 
 .header {
     background-image: url(graphics/headerphoto.jpg);
-    background-repeat: none;
+    background-repeat: no-repeat;
     background-size: cover;
     display: grid;
     grid-template-columns: 1fr;

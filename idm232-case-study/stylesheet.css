@@ -1,0 +1,206 @@
+/*INITIAL STYLING*/
+@import "normalize.css";
+/*icons*/
+@import url('https://css.gg/css?=|bowl|close|heart|more-alt|search|time');
+
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+[hidden] { 
+	display: none; 
+}
+
+/*  FONTS */
+/* source sand pro */
+@font-face {
+    font-family: 'source_sans_pro';
+    src: url('sourcesanspro-bold-webfont.woff2') format('woff2'),
+         url('sourcesanspro-bold-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: bold;
+} 
+@font-face {
+    font-family: 'source_sans_pro';
+    src: url('sourcesanspro-light-webfont.woff2') format('woff2'),
+         url('sourcesanspro-light-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'source_sans_pro';
+    src: url('sourcesanspro-regular-webfont.woff2') format('woff2'),
+         url('sourcesanspro-regular-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* stilu */
+@font-face {
+    font-family: 'stilu';
+    src: url('stilu-bold-webfont.woff2') format('woff2'),
+         url('stilu-bold-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: bold;
+}
+@font-face {
+    font-family: 'stilu';
+    src: url('stilu-light-webfont.woff2') format('woff2'),
+         url('stilu-light-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;;
+}
+@font-face {
+    font-family: 'stilu';
+    src: url('stilu-regular-webfont.woff2') format('woff2'),
+         url('stilu-regular-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'stilu';
+    src: url('stilu-semibold-webfont.woff2') format('woff2'),
+         url('stilu-semibold-webfont.woff') format('woff');
+    font-weight: 600;
+    font-style: bold;
+}
+
+/* libre calson */
+@font-face {
+    font-family: 'libre_caslon';
+    src: url('librecaslondisplay-regular-webfont.woff2') format('woff2'),
+         url('librecaslondisplay-regular-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'libre_caslon';
+    src: url('librecaslontext-bold-webfont.woff2') format('woff2'),
+         url('librecaslontext-bold-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: bold;
+}
+@font-face {
+    font-family: 'libre_caslon';
+    src: url('librecaslontext-regular-webfont.woff2') format('woff2'),
+         url('librecaslontext-regular-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* ROOT COLORS AND FONTS */
+:root {
+    /* colors */
+    --h1: #521527;
+    --h2: #D50000;
+    --accent1: #FFA500;
+    --accent2: #F6C700;
+    --grey: #3b3b3b;
+    --dark: #212121;
+    --light: #F6F6F6;
+    --lighter: white;
+    /* fonts */
+    
+}
+/* headings*/
+body {
+    width: 100%;
+    background-color: var(--light);
+}
+h1 { /* recipe title */
+    font-family: libre_caslon,serif;
+    font-style: normal;
+    color: var(--h1);
+    text-align: center;
+    padding: 0 2rem 1rem;
+}
+h2 { /* recipe section headings */
+    font-family:  libre_caslon, sans-serif; /*regular*/
+    font-weight: normal; 
+    font-style: normal;
+    color: var(--h2);
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    padding: 1rem 1rem;
+}
+h3 { /* recipe subtitle/ step title/ card title */
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-family: stilu, sans-serif;
+    font-weight: 400; /* 400i, 500, 700*/
+    font-style: normal;
+    padding: 1rem 1.25rem;
+
+}
+p {
+    font-family: source_sans_pro, sans-serif;
+    font-weight: 300; /* 400i, 500, 700*/
+    font-style: normal;
+    color: var(--dark);
+    padding: 1rem 1.5rem;
+}
+button {
+    font-family: source_sans_pro, sans-serif;
+    font-weight: 500; /* 400i, 500, 700*/
+    font-style: normal;
+    color:var(--dark);
+    background-color: var(--h2);
+    padding: 1rem;
+    text-transform: uppercase;
+    font-size: 1rem;
+    border: none;
+    margin: 1rem;
+}
+b {
+    font-family: source_sans_pro, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: var(--accent1);
+}
+ol {
+    padding: 1rem 1.5rem;
+    font-family: source_sans_pro, sans-serif;
+    font-weight: 400; /* 400i, 500, 700*/
+    font-style: normal;
+    color: var(--dark);
+}
+/* images */
+img {
+    max-width:100%;
+    height:auto;
+}
+
+/* styling */
+.hero {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+.cs-wrapper {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.video {
+    display: flex;
+}
+
+@media screen and (min-width: 900px) {
+    img {
+        max-width: 600px;
+        text-align: center;
+    }
+    .hero {
+        max-width:100%;
+        height:auto;
+    }
+}
+
+@media screen and (min-width: 1299px) {
+    .hero, .cs-wrapper {
+        max-width: 1300px;
+        margin: 0 auto;
+    }
+}
