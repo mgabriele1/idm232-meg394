@@ -23,7 +23,7 @@
 <div class="recipe-wrapper">
     <!--TITLE-->
 <div class="rec-title">
-    <img src="recipe_images/<?php echo $row['imageFolder'];?>/main_pic.jpg" alt="recipe photo">
+    <img src="recipe_images/<?php echo $row['imageFolder'];?>/main_pic.jpg" alt="recipe photo" class="titimage">
     <div class="title-text">
         <h1><?php echo $row['title'];?></h1>
         <h3><?php echo "with " . $row['side'];?></h3>
